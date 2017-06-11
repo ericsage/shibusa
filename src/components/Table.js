@@ -1,28 +1,70 @@
 import React from 'react'
-import './Tab.css'
+import './Table.css'
 
-export default function Tab({
-  selected,
+export function Table({
   children,
   ...props,
 }) {
   return (
-    <li
-      className={"Shibusa-Tab" + " " + (selected && "selected")}
-      {...props}
-    >
+    <table className="Shibusa-Table">
       {children}
-    </li>
+    </table>
   )
 }
 
-export default function Table({
+export function TableHead({
   children,
   ...props,
 }) {
   return (
-    <table className="Shibusa-table">
+    <thead className="Shibusa-TableHead">
+      <tr className="Shibusa-TableHead-Row">
+        {children}
+      </tr>
+    </thead>
+  )
+}
+
+export function TableHeader({
+  children,
+  ...props,
+}) {
+  return (
+    <th className="Shibusa-TableHeader">
       {children}
-    </table>
+    </th>
+  )
+}
+
+export function TableBody({
+  children,
+  ...props,
+}) {
+  return (
+    <tbody className="Shibusa-TableBody">
+      {children}
+    </tbody>
+  )
+}
+
+export function TableRow({
+  children,
+  ...props,
+}) {
+  return (
+    <tr className="Shibusa-TableRow">
+      {children}
+    </tr>
+  )
+}
+
+export function TableData({
+  children,
+  ...props,
+}) {
+  return (
+    <td className="Shibusa-TableData">
+      {children}
+    </td>
   )
 }

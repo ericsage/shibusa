@@ -7,6 +7,7 @@ import TextArea from './components/TextArea'
 import TextBox from './components/TextBox'
 import Tab from './components/Tab'
 import TabList from './components/TabList'
+import { Table, TableHead, TableHeader, TableBody, TableRow, TableData } from './components/Table'
 
 const Header = ({title}) => (
   <div className="Shibusa-Header">
@@ -98,6 +99,38 @@ class App extends Component {
             <Tab>Firewalls</Tab>
             <Tab>PTR records</Tab>
           </TabList>
+        </Row>
+        <Header title="Table"/>
+        <Row>
+          <Table>
+            <TableHead>
+              <TableHeader>Type</TableHeader>
+              <TableHeader>Hostname</TableHeader>
+              <TableHeader>Value</TableHeader>
+              <TableHeader>TTL (seconds)</TableHeader>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableData>NS</TableData>
+                <TableData>ericsage.io</TableData>
+                <TableData>ns1.digitalocean.com.</TableData>
+                <TableData>1800</TableData>
+              </TableRow>
+              <TableRow>
+                <TableData>NS</TableData>
+                <TableData>ericsage.io</TableData>
+                <TableData>ns2.digitalocean.com.</TableData>
+                <TableData>1800</TableData>
+              </TableRow>
+              <TableRow>
+                <TableData>NS</TableData>
+                <TableData>ericsage.io</TableData>
+                <TableData>ns3.digitalocean.com.</TableData>
+                <TableData>1800</TableData>
+              </TableRow>
+
+            </TableBody>
+          </Table>
         </Row>
       </div>
     );
