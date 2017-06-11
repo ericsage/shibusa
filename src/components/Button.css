@@ -1,3 +1,5 @@
+/* Default Button */
+
 .Shibusa-Button {
   margin: 10px;
   height: 45px;
@@ -12,6 +14,37 @@
   transition: all .2s ease-in-out;
 }
 
+.Shibusa-Button:hover {
+  background-color: #dfdfdf;
+}
+
+.Shibusa-Button:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  color: #bbb;
+}
+
+/* Action Button */
+.Shibusa-Button.action {
+  background-color: #f96332;
+  border: 1px solid #f96332;
+  color: white;
+}
+
+.Shibusa-Button.action:hover {
+  background-color: #f85019;
+}
+
+.Shibusa-Button.action:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  color: #bbb;
+}
+
+/* Info Button */
+
 .Shibusa-Button.info {
   background-color: #0069ff;
   border: 1px solid #0069ff;
@@ -22,9 +55,14 @@
   background-color: #0052ff;
 }
 
-.Shibusa-Button:hover {
-  background-color: #dfdfdf;
+.Shibusa-Button.info:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  color: #bbb;
 }
+
+/* Success Button */
 
 .Shibusa-Button.success {
   background-color: #15CD72;
@@ -36,6 +74,33 @@
   background-color: #0CB863;
 }
 
+.Shibusa-Button.success:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  color: #bbb;
+}
+
+/* Warning Button */
+.Shibusa-Button.warning {
+  background-color: #FFC552;
+  border: 1px solid #FFC552;
+  color: white;
+}
+
+.Shibusa-Button.warning:hover {
+  background-color: #ffa81d;
+}
+
+.Shibusa-Button.warning:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  color: #bbb;
+}
+
+/* Danger Button */
+
 .Shibusa-Button.danger {
   background-color: #ED4F32;
   border: 1px solid #ED4F32;
@@ -44,4 +109,11 @@
 
 .Shibusa-Button.danger:hover {
   background-color: red;
+}
+
+.Shibusa-Button.danger:disabled {
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  color: #bbb;
 }
