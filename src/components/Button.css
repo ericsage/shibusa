@@ -14,8 +14,14 @@
   transition: all .2s ease-in-out;
 }
 
+.Shibusa-Button.inverted {
+  background-color: white;
+  color: #676767;
+}
+
 .Shibusa-Button:hover {
   background-color: #dfdfdf;
+  color: white;
 }
 
 .Shibusa-Button:disabled {
@@ -32,8 +38,14 @@
   color: white;
 }
 
+.Shibusa-Button.action.inverted {
+  background-color: white;
+  color: #f96332;
+}
+
 .Shibusa-Button.action:hover {
   background-color: #f85019;
+  color: white;
 }
 
 .Shibusa-Button.action:disabled {
@@ -51,8 +63,14 @@
   color: white;
 }
 
+.Shibusa-Button.info.inverted {
+  background-color: white;
+  color: #0069ff;
+}
+
 .Shibusa-Button.info:hover {
   background-color: #0052ff;
+  color: white;
 }
 
 .Shibusa-Button.info:disabled {
@@ -70,8 +88,18 @@
   color: white;
 }
 
+.Shibusa-Button.success.inverted {
+  background-color: white;
+  color: #15CD72;
+}
+
 .Shibusa-Button.success:hover {
   background-color: #0CB863;
+}
+
+.Shibusa-Button.success.inverted:hover {
+  background-color: #0CB863;
+  color: white;
 }
 
 .Shibusa-Button.success:disabled {
@@ -88,8 +116,14 @@
   color: white;
 }
 
+.Shibusa-Button.warning.inverted {
+  background-color: white;
+  color: #FFC552;
+}
+
 .Shibusa-Button.warning:hover {
   background-color: #ffa81d;
+  color: white;
 }
 
 .Shibusa-Button.warning:disabled {
@@ -107,8 +141,14 @@
   color: white;
 }
 
+.Shibusa-Button.danger.inverted {
+  background-color: white;
+  color: #ED4F32;
+}
+
 .Shibusa-Button.danger:hover {
   background-color: red;
+  color: white;
 }
 
 .Shibusa-Button.danger:disabled {

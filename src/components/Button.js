@@ -2,13 +2,18 @@ import React from 'react'
 import './Button.css'
 
 export default function Button({
-  children,
   type,
+  inverted,
+  children,
   ...props
 }) {
   return (
     <button
-      className={"Shibusa-Button" + " " + (type || "")}
+      className={
+        "Shibusa-Button" +
+        " " + (type || "") +
+        " " + (inverted && "inverted")
+      }
       {...props}
     >
       {children}

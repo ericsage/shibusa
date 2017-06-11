@@ -1,7 +1,10 @@
 import React from 'react'
 import './InfoBox.css'
 
-export default function InfoBox({children, ...props}) {
+export default function InfoBox({
+  children,
+  ...props
+}) {
   return (
     <div
       className="Shibusa-InfoBox"
