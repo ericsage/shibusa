@@ -1,0 +1,33 @@
+.Shibusa-TextBox {
+  background-color: #fafafa;
+  border: 2px solid #ececec;
+  color: #444;
+  margin: 10px;
+  padding: 1.5rem;
+  border-radius: 3px;
+}
+
+.Shibusa-TextBox.action {
+  background-color: #f9caaa;
+  border: 2px solid #ffbf80;
+}
+
+.Shibusa-TextBox.info {
+  background-color: #f9fcff;
+  border: 2px solid #e8f4ff;
+}
+
+.Shibusa-TextBox.success {
+  background-color: #dff0d8;
+  border: 2px solid #d6e9c6;
+}
+
+.Shibusa-TextBox.warning {
+  background-color: #fcf8e3;
+  border: 2px solid #faebcc;
+}
+
+.Shibusa-TextBox.danger {
+  background-color: #f2dede;
+  border: 2px solid #ebccd1;
+}

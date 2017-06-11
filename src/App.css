@@ -58,6 +58,10 @@ h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
   word-break: break-all;
   color: #444;
-  margin: 0 0 .5rem 0;
+  margin: 2px;
   font-weight: 400;
+}
+
+p {
+  margin: 0;
 }

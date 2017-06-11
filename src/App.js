@@ -4,6 +4,7 @@ import './App.css';
 import Button from './components/Button'
 import TextField from './components/TextField'
 import TextArea from './components/TextArea'
+import TextBox from './components/TextBox'
 import Tab from './components/Tab'
 import TabList from './components/TabList'
 
@@ -55,6 +56,28 @@ class App extends Component {
         <Row>
           <TextArea placeholder="Enter some text here..."/>
         </Row>
+        <Header title="TextBox"/>
+        <div style={{margin: "0 20% 0 20%"}}>
+          <TextBox>
+            <p>This is an example of a text box. It contains important information.</p>
+          </TextBox>
+          <TextBox type="action">
+            <p>This is an example of an action box. It contains important information.</p>
+          </TextBox>
+          <TextBox type="info">
+            <p>This is an example of an info box. It contains important information.</p>
+          </TextBox>
+
+          <TextBox type="success">
+            <p>This is an example of an success box. It contains important information.</p>
+          </TextBox>
+          <TextBox type="warning">
+            <p>This is an example of an warning box. It contains important information.</p>
+          </TextBox>
+          <TextBox type="danger">
+            <p>This is an example of an danger box. It contains important information.</p>
+          </TextBox>
+        </div>
         <Header title="Headings"/>
         <Row>
           <div style={{width: "100%"}}>
