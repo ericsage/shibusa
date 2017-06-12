@@ -9,11 +9,14 @@ import Tab from './components/Tab'
 import TabList from './components/TabList'
 import { Table, TableHead, TableHeader, TableBody, TableRow, TableData } from './components/Table'
 import { Select, Option } from './components/Select'
+import Snippet from './components/Snippet'
 
-const Header = ({title}) => (
+const Header = ({title, text, code}) => (
   <div className="Shibusa-Header">
     <h2>{title}</h2>
     <hr/>
+    <p>{text}</p>
+  <Snippet>{code}</Snippet>
   </div>
 )
 
@@ -31,7 +34,11 @@ class App extends Component {
           <h1>SHIBUSA</h1>
           <h2>A React Component Library</h2>
         </div>
-        <Header title="Buttons"/>
+        <Header
+          title="Buttons"
+          text={"Button functions just like a normal <button> except that a type prop may be passed a string value of action, info, success, warning, or danger. Adding disabled as a prop will also cause the button to grey itself out. Generally, there should only be one button of type action per page or component to draw the users eye."}
+          code={"<Button> Default </Button>"}
+        />
         <Row>
           <Button> Default </Button>
           <Button disabled type="info"> Disabled </Button>
@@ -50,11 +57,19 @@ class App extends Component {
           <Button inverted type="warning"> Warning </Button>
           <Button inverted type="danger"> Danger </Button>
         </Row>
-        <Header title="TextField"/>
+        <Header
+          title="TextField"
+          text={"TextField functions just like <input type='text'/>"}
+          code={"<TextField placeholder='Enter some text here...'"}
+        />
         <Row>
           <TextField placeholder="Enter some text here..."/>
         </Row>
-        <Header title="Select"/>
+        <Header
+          title="Select"
+          text={"Select and Option function just like <select> and <option>. When there is no suitable default value, add a selected disabled top level option. This will look like a title for the options to select from. The actual selection menu is styled by the browser."}
+          code={"<Select><Option disabled selected disabled value='newcar'>New Car</Option>"}
+        />
         <Row>
           <Select>
             <Option disabled selected value="newcar">New Car</Option>
@@ -68,7 +83,11 @@ class App extends Component {
         <Row>
           <TextArea placeholder="Enter some text here..."/>
         </Row>
-        <Header title="TextBox"/>
+        <Header
+          title="TextBox"
+          text={"TextBox should be used to make important information stand out to the user. It has a type prop that accepts the same values as the type prop on Button."}
+          code={"<TextBox type='info'><p>This is an example of an info box. It contains important information.</p></TextBox>"}
+        />
         <div style={{margin: "0 20% 0 20%"}}>
           <TextBox>
             <p>This is an example of a text box. It contains important information.</p>

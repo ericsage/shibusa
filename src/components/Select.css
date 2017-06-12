@@ -17,3 +17,8 @@
   background-color: #FFF;
   -webkit-appearance: none;
 }
+
+.Shibusa-Select:focus {
+  outline: none;
+  border: 1px solid #f96332;
+}

@@ -13,7 +13,7 @@
 
 .Shibusa-TextField:focus {
   outline: none;
-  border: 1px solid #0069ff;
+  border: 1px solid #f96332;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
