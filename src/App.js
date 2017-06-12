@@ -8,6 +8,7 @@ import TextBox from './components/TextBox'
 import Tab from './components/Tab'
 import TabList from './components/TabList'
 import { Table, TableHead, TableHeader, TableBody, TableRow, TableData } from './components/Table'
+import { Select, Option } from './components/Select'
 
 const Header = ({title}) => (
   <div className="Shibusa-Header">
@@ -52,6 +53,16 @@ class App extends Component {
         <Header title="TextField"/>
         <Row>
           <TextField placeholder="Enter some text here..."/>
+        </Row>
+        <Header title="Select"/>
+        <Row>
+          <Select>
+            <Option disabled selected value="newcar">New Car</Option>
+            <Option value="volvo">Volvo</Option>
+            <Option value="saab">Saab</Option>
+            <Option value="mercedes">Mercedes</Option>
+            <Option value="audi">Audi</Option>
+          </Select>
         </Row>
         <Header title="TextArea"/>
         <Row>
@@ -128,7 +139,6 @@ class App extends Component {
                 <TableData>ns3.digitalocean.com.</TableData>
                 <TableData>1800</TableData>
               </TableRow>
-
             </TableBody>
           </Table>
         </Row>
