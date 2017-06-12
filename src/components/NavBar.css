@@ -1,0 +1,21 @@
+.Shibusa-NavBar {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  border-bottom: 2px solid transparent;
+  margin-bottom: 1.5rem;
+}
+
+.Shibusa-NavBar .Shibusa-Tab {
+  color: #676767;
+}
+
+.Shibusa-NavBar .Shibusa-Tab:hover {
+  color: #f96332;
+  border-bottom: 2px solid #f96332;
+}
+
+.Shibusa-NavBar .Shibusa-Tab.selected {
+  color: #f96332;
+}

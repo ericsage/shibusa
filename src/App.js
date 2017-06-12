@@ -6,7 +6,8 @@ import TextField from './components/TextField'
 import TextArea from './components/TextArea'
 import TextBox from './components/TextBox'
 import Tab from './components/Tab'
-import TabList from './components/TabList'
+import TabBar from './components/TabBar'
+import NavBar from './components/NavBar'
 import { Table, TableHead, TableHeader, TableBody, TableRow, TableData } from './components/Table'
 import { Select, Option } from './components/Select'
 import Snippet from './components/Snippet'
@@ -58,9 +59,33 @@ class App extends Component {
           <Button inverted type="danger"> Danger </Button>
         </Row>
         <Header
+           title="TabBar and NavBar"
+           text={"TabBar and NavBar both use the Tab component as children, but are used in different contexts. A NavBar should be used as a way to switch entire pages, wheras a TabBar is usefull to tab between different views of a component. Add selected as a prop to a Tab will make it visually appear as the selected tab."}
+           code={"<TabBar><Tab selected>Load Balancers</Tab></TabBar>"}
+        />
+        <Row>
+          <TabBar>
+            <Tab>Domains</Tab>
+            <Tab>Floating IPs</Tab>
+            <Tab selected>Load Balancers</Tab>
+            <Tab>Firewalls</Tab>
+            <Tab>PTR records</Tab>
+          </TabBar>
+        </Row>
+        <Row>
+          <NavBar>
+            <Tab>Domains</Tab>
+            <Tab>Floating IPs</Tab>
+            <Tab selected>Load Balancers</Tab>
+            <Tab>Firewalls</Tab>
+            <Tab>PTR records</Tab>
+          </NavBar>
+        </Row>
+
+        <Header
           title="TextField"
           text={"TextField functions just like <input type='text'/>"}
-          code={"<TextField placeholder='Enter some text here...'"}
+          code={"<TextField placeholder='Enter some text here...'/>"}
         />
         <Row>
           <TextField placeholder="Enter some text here..."/>
@@ -79,7 +104,11 @@ class App extends Component {
             <Option value="audi">Audi</Option>
           </Select>
         </Row>
-        <Header title="TextArea"/>
+        <Header
+          title="TextArea"
+          text={"TextArea functions just like <texarea/>"}
+          code={"<TextArea placeholder='Enter some text here...'/>"}
+        />
         <Row>
           <TextArea placeholder="Enter some text here..."/>
         </Row>
@@ -109,28 +138,11 @@ class App extends Component {
             <p>This is an example of an danger box. It contains important information.</p>
           </TextBox>
         </div>
-        <Header title="Headings"/>
-        <Row>
-          <div style={{width: "100%"}}>
-            <h1>Example H1 Heading</h1>
-            <h2>Example H2 Heading</h2>
-            <h3>Example H3 Heading</h3>
-            <h4>Example H4 Heading</h4>
-            <h5>Example H5 Heading</h5>
-            <h6>Example H6 Heading</h6>
-          </div>
-        </Row>
-        <Header title="TabList"/>
-        <Row>
-          <TabList>
-            <Tab>Domains</Tab>
-            <Tab>Floating IPs</Tab>
-            <Tab selected>Load Balancers</Tab>
-            <Tab>Firewalls</Tab>
-            <Tab>PTR records</Tab>
-          </TabList>
-        </Row>
-        <Header title="Table"/>
+        <Header
+          title="Table"
+          text={"Table contains many subcomponents, most of which funtion like their html counterparts. Table should be used as a lightweight Table, if you need filtering, sorting, or resizable columns, you'll probably require a third party solution, or will need to build your own."}
+          code={"<Table><TableHead><TableHeader>Header</TableHeader></TableHead><TableBody><TableRow><TableData>Data</TableData></TableRow></TableBody></Table>"}
+        />
         <Row>
           <Table>
             <TableHead>

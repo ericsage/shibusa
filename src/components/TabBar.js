@@ -1,13 +1,13 @@
 import React from 'react'
-import './TabList.css'
+import './TabBar.css'
 
-export default function TabList({
+export default function TabBar({
   children,
   ...props,
 }) {
   return (
     <ul
-      className="Shibusa-TabList"
+      className="Shibusa-TabBar"
       {...props}
     >
       {children}
