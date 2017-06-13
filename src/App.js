@@ -10,6 +10,7 @@ import TabBar from './components/TabBar'
 import NavBar from './components/NavBar'
 import { Table, TableHead, TableHeader, TableBody, TableRow, TableData } from './components/Table'
 import { Select, Option } from './components/Select'
+import Checkbox from './components/Checkbox'
 import Snippet from './components/Snippet'
 
 const Header = ({title, text, code}) => (
@@ -103,6 +104,28 @@ class App extends Component {
             <Option value="mercedes">Mercedes</Option>
             <Option value="audi">Audi</Option>
           </Select>
+          <Select>
+            <Option value="http">HTTP</Option>
+            <Option value="tcp">TCP</Option>
+            <Option value="smtp">SMTP</Option>
+          </Select>
+          <Select>
+            <Option value="network">Network</Option>
+            <Option selected value="matrix">Matrix</Option>
+            <Option value="list">List</Option>
+          </Select>
+        </Row>
+        <Header
+          title="Checkbox"
+          text={"Checkbox functions like an <input type='checkbox'/>. On/Off is visually represented by the checkbox being filled with the action color."}
+          code={"<Checkbox/>"}
+        />
+        <Row>
+          <Checkbox checked={true}/>
+          <h3>Checkbox on</h3>
+          <div style={{width: 40}}/>
+          <Checkbox checked={false}/>
+          <h3>Checkbox off</h3>
         </Row>
         <Header
           title="TextArea"
