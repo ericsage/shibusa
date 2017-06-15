@@ -1,0 +1,136 @@
+:root{
+  --track:#dfdfdf;
+  --hover:#f85019;
+  --thumb:#f96332;
+}
+
+.Shibusa-Slider {
+  position:relative;
+  width:100%;
+  margin:5px;
+}
+
+.Shibusa-Slider-control {
+  height: 24px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+.Shibusa-Slider-control:focus {
+  outline: none;
+}
+
+.Shibusa-Slider-control::-webkit-slider-runnable-track {
+  height: 2px;
+  animate: 0.2s;
+  background: var(--track);
+  border-radius: 5px;
+  -webkit-appearance:none;
+  z-index:1;
+}
+
+.Shibusa-Slider-control::-webkit-slider-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 25px;
+  background: var(--thumb);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  z-index:10;
+}
+
+.Shibusa-Slider-control:disabled::-webkit-slider-runnable-track {
+  background: #eee;
+}
+
+.Shibusa-Slider-fill{
+  position:relative;
+  top:50%;
+  background: var(--thumb);
+  height:2px;
+  z-index:5;
+  overflow:hidden;
+  pointer-events: none;
+}
+
+.Shibusa-Slider-control:disabled > .Shibusa-Slider-fill {
+  display:none;
+}
+
+.Shibusa-Slider-control:disabled::-webkit-slider-thumb {
+  width:10px;
+  height:10px;
+  cursor: not-allowed;
+  border: 2px solid #ccc;
+  margin-top: -4px;
+  background: #ddd;
+  transition: .5s ease;
+}
+
+.Shibusa-Slider:enabled:hover > .Shibusa-Slider-fill,
+.Shibusa-Slider:enabled:hover > .Shibusa-Slider-control::-webkit-slider-thumb {
+  background:var(--hover);
+}
+
+.Shibusa-Slider-control:enabled::-webkit-slider-thumb:hover{
+  transition: .2s ease-in-out;
+  box-shadow: rgba(249, 99, 50, .1) 0px 0px 0px 8px;
+}
+
+.Shibusa-Slider-control:enabled::-webkit-slider-thumb:active {
+  box-shadow:none;
+  width:16px;
+  height: 16px;
+  margin-top:-7px;
+}
+.Shibusa-Slider-control:focus::-webkit-slider-runnable-track {
+  background: var(--track);
+}
+.Shibusa-Slider-control::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: var(--track);
+  border-radius: 1px;
+}
+.Shibusa-Slider-control::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 25px;
+  background: var(--thumb);
+  cursor: pointer;
+}
+.Shibusa-Slider-control::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.Shibusa-Slider-control::-ms-fill-lower {
+  background: var(--thumb);
+  border-radius: 2px;
+}
+.Shibusa-Slider-control::-ms-fill-upper {
+  background: var(--track);
+  border-radius: 2px;
+}
+.Shibusa-Slider-control::-ms-thumb {
+  margin-top: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 25px;
+  background: var(--thumb);
+  cursor: pointer;
+}
+
+.Shibusa-Slider-control:focus::-ms-fill-lower {
+  background: var(--thumb);
+}
+.Shibusa-Slider-control:focus::-ms-fill-upper {
+  background: var(--track);
+}
